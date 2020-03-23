@@ -3167,16 +3167,6 @@ def bot(op):
                                     kb.sendMessage(msg.to, "พร้อมคุ้มกันเจ้านายค่ะ")
                                 except:
                                     pass
-                                
-                        elif cmd == "js":
-                          if wait["selfbot"] == True:
-                            if msg._from in admin:
-                                try:
-                                    ginfo = cl.getGroup(msg.to)
-                                    cl.inviteIntoGroup(msg.to, [Zmid])
-                                    cl.sendMessage(msg.to,"Grup 「"+str(ginfo.name)+"」 Aman Dari JS")
-                                except:
-                                    pass
     
                         elif cmd == "in5":
                           if wait["selfbot"] == True:
