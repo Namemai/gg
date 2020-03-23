@@ -865,6 +865,7 @@ def bot(op):
                                                                 ky.cancleGroupInvitation(op.param1,[op.param2])
                                                             except:
                                                                 pass
+                                                            
         if op.type == 13:
             if op.param3 in wait["blacklist"]:
                     try:
@@ -2517,38 +2518,47 @@ def bot(op):
                 else:
                     wait["blacklist"][op.param2] = True
                     try:
+                        cl.cancelGroupInvitation(op.param1,[op.param2])
                         cl.inviteIntoGroup(op.param1,[op.param3])
                         ki.acceptGroupInvitation(op.param1)
                     except:
                         try:
+                            cl.cancelGroupInvitation(op.param1,[op.param2])
                             cl.inviteIntoGroup(op.param1,[op.param3])
                             kk.acceptGroupInvitation(op.param1)
                         except:
                             try:
+                                cl.cancelGroupInvitation(op.param1,[op.param2])
                                 cl.inviteIntoGroup(op.param1,[op.param3])
                                 kc.acceptGroupInvitation(op.param1)
                             except:
                                 try:
+                                    cl.cancelGroupInvitation(op.param1,[op.param2])
                                     cl.inviteIntoGroup(op.param1,[op.param3])
                                     km.acceptGroupInvitation(op.param1)
                                 except:
                                     try:
+                                        cl.cancelGroupInvitation(op.param1,[op.param2])
                                         cl.inviteIntoGroup(op.param1,[op.param3])
                                         kb.acceptGroupInvitation(op.param1)
                                     except:
                                         try:
+                                            cl.cancelGroupInvitation(op.param1,[op.param2])
                                             cl.inviteIntoGroup(op.param1,[op.param3])
                                             kn.acceptGroupInvitation(op.param1)
                                         except:
                                             try:
+                                                cl.cancelGroupInvitation(op.param1,[op.param2])
                                                 cl.inviteIntoGroup(op.param1,[op.param3])
                                                 ko.acceptGroupInvitation(op.param1)
                                             except:
                                                 try:
+                                                    cl.cancelGroupInvitation(op.param1,[op.param2])
                                                     cl.inviteIntoGroup(op.param1,[op.param3])
                                                     kw.acceptGroupInvitation(op.param1)
                                                 except:
                                                     try:
+                                                        cl.cancelGroupInvitation(op.param1,[op.param2])
                                                         cl.inviteIntoGroup(op.param1,[op.param3])
                                                         ke.acceptGroupInvitation(op.param1)
                                                     except:
@@ -2574,10 +2584,51 @@ def bot(op):
                                                             Ticket = cl.reissueGroupTicket(op.param1)
                                                         except:
                                                             try:
+                                                                cl.cancelGroupInvitation(op.param1,[op.param2])
                                                                 cl.inviteIntoGroup(op.param1,[op.param3])
                                                                 ky.acceptGroupInvitation(op.param1)
                                                             except:
-                                                                pass
+                                                                try:
+                                                                    cl.cancelGroupInvitation(op.param1,[op.param2])
+                                                                    cl.inviteIntoGroup(op.param1,[op.param3])
+                                                                    ki.acceptGroupInvitation(op.param1)
+                                                                except:
+                                                                    try:
+                                                                        cl.cancelGroupInvitation(op.param1,[op.param2])
+                                                                        cl.inviteIntoGroup(op.param1,[op.param3])
+                                                                        kk.acceptGroupInvitation(op.param1)
+                                                                    except:
+                                                                        try:
+                                                                            cl.cancelGroupInvitation(op.param1,[op.param2])
+                                                                            cl.inviteIntoGroup(op.param1,[op.param3])
+                                                                            kc.acceptGroupInvitation(op.param1)
+                                                                        except:
+                                                                            try:
+                                                                                cl.cancelGroupInvitation(op.param1,[op.param2])
+                                                                                cl.inviteIntoGroup(op.param1,[op.param3])
+                                                                                km.acceptGroupInvitation(op.param1)
+                                                                            except:
+                                                                                try:
+                                                                                    cl.cancelGroupInvitation(op.param1,[op.param2])
+                                                                                    cl.inviteIntoGroup(op.param1,[op.param3])
+                                                                                    kb.acceptGroupInvitation(op.param1)
+                                                                                except:
+                                                                                    try:
+                                                                                        cl.cancelGroupInvitation(op.param1,[op.param2])
+                                                                                        cl.inviteIntoGroup(op.param1,[op.param3])
+                                                                                        kn.acceptGroupInvitation(op.param1)
+                                                                                    except:
+                                                                                        try:
+                                                                                            cl.cancelGroupInvitation(op.param1,[op.param2])
+                                                                                            cl.inviteIntoGroup(op.param1,[op.param3])
+                                                                                            ko.acceptGroupInvitation(op.param1)
+                                                                                        except:
+                                                                                            try:
+                                                                                                cl.cancelGroupInvitation(op.param1,[op.param2])
+                                                                                                cl.inviteIntoGroup(op.param1,[op.param3])
+                                                                                                ke.acceptGroupInvitation(op.param1)
+                                                                                            except:
+                                                                                                pass
                     return
         
             if op.type == 19:
