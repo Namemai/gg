@@ -3771,12 +3771,12 @@ def bot(op):
                                helpMessage = help()
                                cl.sendMessage(msg.to, str(helpMessage))
                                                                                        
-                        if cmd == "เปิดบอท10":
+                        if cmd == "เปิดบอท":
                             if msg._from in admin:
                                 wait["selfbot"] = True
                                 cl.sendText(msg.to, "เปิดระบบทำงานคิก10ตัวแล้ว..")
                                 
-                        elif cmd == "ปิดบอท10":
+                        elif cmd == "ปิดบอท":
                             if msg._from in admin:
                                 wait["selfbot"] = False
                                 cl.sendText(msg.to, "ปิดระบบทำงานคิก10ตัวแล้ว")
@@ -4815,7 +4815,7 @@ def bot(op):
                                     mf += str(a) + ". " +cl.getGroup(group).name + "\n"
                                 cl.sendMessage(msg.to,"SELFBOT\n\n「😈」 PROTECT URL :\n"+ma+"\n「😈」 PROTECT KICK :\n"+mb+"\n「😈」 PROTECT JOIN :\n"+md+"\n「😈」 PROTECT CANCEL:\n"+mc+"\n「😈」 PROTECT INVITE:\n"+me+"\n「😈」 PROTECT ANTIJS :\n"+mf+"\nTotal「%s」Grup diamankan" %(str(len(protectqr)+len(protectkick)+len(protectjoin)+len(protectcancel)+len(protectinvite)+len(protectantijs))))
 
-                        elif cmd == "b10":
+                        elif cmd == "b":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 ki.sendMessage(msg.to,responsename1)
@@ -4829,7 +4829,7 @@ def bot(op):
                                 ke.sendMessage(msg.to,responsename9)
                                 ky.sendMessage(msg.to,responsename10)
                                 
-                        elif cmd == "ดึง10":
+                        elif cmd == "ดึงคิก":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 try:
@@ -4860,7 +4860,7 @@ def bot(op):
                                 except:
                                     pass
     
-                        elif cmd == "in10":
+                        elif cmd == "in":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 G = cl.getGroup(msg.to)
@@ -4884,7 +4884,7 @@ def bot(op):
                                 ky.updateGroup(G)
                                 ky.sendMessage(msg.to, "พร้อมคุ้มกันเจ้านายค่ะ ")
 
-                        elif cmd == "out10":
+                        elif cmd == "out":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 G = cl.getGroup(msg.to)
@@ -4900,14 +4900,14 @@ def bot(op):
                                 ky.leaveGroup(msg.to)
                                 sw.leaveGroup(msg.to)
                                 
-                        elif cmd == "byeme":
+                        elif cmd == "bye":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 G = cl.getGroup(msg.to)
                                 cl.sendText(msg.to, "Bye bye fams "+str(G.name))
                                 cl.leaveGroup(msg.to)
                                 
-                        elif cmd == "ck10":
+                        elif cmd == "ck":
                             if msg._from in admin or msg._from in owner:
                                try:cl.inviteIntoGroup(to, [mid]);has = "OK"
                                except:has = "NOT"
@@ -5157,7 +5157,7 @@ def bot(op):
                                 G = cl.getGroup(msg.to)
                                 sw.leaveGroup(msg.to)
                                 
-                        elif cmd == "10" or cmd == "ชบ":
+                        elif cmd == "bb" or cmd == "10":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 ki.sendMessage(msg.to, "อยู่ค่ะเจ้านาย ")
@@ -5171,7 +5171,7 @@ def bot(op):
                                 ke.sendMessage(msg.to, "อยู่ค่ะเจ้านาย ")
                                 ky.sendMessage(msg.to, "อยู่ค่ะเจ้านาย ")
 
-                        elif cmd == "sb10":
+                        elif cmd == "sb":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 get_profile_time_start = time.time()
@@ -5227,7 +5227,7 @@ def bot(op):
                                elapsed_time = time.time() - start
                                cl.sendMessage(msg.to, "{} ms".format(str(elapsed_time)))
 
-                        elif cmd == "speedbot" or cmd == "sp10":
+                        elif cmd == "speedbot" or cmd == "spb":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                start = time.time()
@@ -5962,7 +5962,7 @@ def bot(op):
                                        except:
                                            pass
 
-                        elif ("10k " in msg.text):
+                        elif ("Bk " in msg.text):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                key = eval(msg.contentMetadata["MENTION"])
@@ -6150,12 +6150,12 @@ def bot(op):
                                 wait["dellstaff"] = True
                                 cl.sendText(msg.to,"Send a contact...")
 
-                        elif cmd == "bot:on" or text.lower() == 'เปิดบอท':
+                        elif cmd == "bot:on" or text.lower() == 'บอท on':
                             if msg._from in admin:
                                 wait["addbots"] = True
                                 cl.sendText(msg.to,"Send a contact...")
 
-                        elif cmd == "bot:repeat" or text.lower() == 'ปิดบอท':
+                        elif cmd == "bot:repeat" or text.lower() == 'บอท off:
                             if msg._from in admin:
                                 wait["dellbots"] = True
                                 cl.sendText(msg.to,"Send a contact...")
