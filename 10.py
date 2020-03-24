@@ -1116,7 +1116,9 @@ def bot(op):
                             cl.sendMessage(op.param1,"=Admin Invited=")
                 else:
                     pass
-
+            except:
+                pass
+  
         if op.type == 32:
             if op.param1 in protectcancel:
                 if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
