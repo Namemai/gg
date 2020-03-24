@@ -2206,12 +2206,12 @@ def bot(op):
                         if cmd == "เปิดบอท5":
                             if msg._from in admin:
                                 wait["selfbot"] = True
-                                cl.sendText(msg.to, "เปิดระบบทำงานคิก10ตัวแล้ว..")
+                                cl.sendText(msg.to, "เปิดระบบทำงานคิก5ตัวแล้ว..")
                                 
                         elif cmd == "ปิดบอท5":
                             if msg._from in admin:
                                 wait["selfbot"] = False
-                                cl.sendText(msg.to, "ปิดระบบทำงานคิก10ตัวแล้ว")
+                                cl.sendText(msg.to, "ปิดระบบทำงานคิก5ตัวแล้ว")
                                             
                         elif cmd == "hb":
                           if wait["selfbot"] == True:
@@ -3336,24 +3336,6 @@ def bot(op):
                                 G.preventedJoinByTicket = True
                                 kb.updateGroup(G)
                                 
-                        elif cmd == "ผีมา":
-                            if msg._from in admin:
-                                G = cl.getGroup(msg.to)
-                                ginfo = cl.getGroup(msg.to)
-                                G.preventedJoinByTicket = False
-                                cl.updateGroup(G)
-                                invsend = 0
-                                Ticket = cl.reissueGroupTicket(msg.to)
-                                sw.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                G = sw.getGroup(msg.to)
-                                G.preventedJoinByTicket = True
-                                sw.updateGroup(G)
-
-                        elif cmd == "ผีออก":
-                            if msg._from in admin:
-                                G = cl.getGroup(msg.to)
-                                sw.leaveGroup(msg.to)
-                                
                         elif cmd == "5" or cmd == "ชบ":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
@@ -3403,7 +3385,9 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                start = time.time()
-                               ki.sendMessage(msg.to, "Pusiiing...")
+                               cl.sendMessage(msg.to, "Pusiiing...")
+                               elapsed_time = time.time() - start
+                               cl.sendMessage(msg.to, "{} detik".format(str(elapsed_time)))
                                elapsed_time = time.time() - start
                                ki.sendMessage(msg.to, "{} detik".format(str(elapsed_time)))
                                elapsed_time = time.time() - start
