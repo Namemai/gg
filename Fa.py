@@ -49,7 +49,7 @@ channel4 = LineChannel(km)
 km.log("Channel Access Token : " + str(channel4.channelAccessToken))
 
 
-kb = LineClient("cew74790@bcaoo.com","mai06555mai")
+kb = LineClient("ylv91040@bcaoo.com","mai06555mai")
 kb.log("Auth Token : " + str(kb.authToken))
 channel5 = LineChannel(kb)
 kb.log("Channel Access Token : " + str(channel5.channelAccessToken))
