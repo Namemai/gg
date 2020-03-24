@@ -6155,7 +6155,7 @@ def bot(op):
                                 wait["addbots"] = True
                                 cl.sendText(msg.to,"Send a contact...")
 
-                        elif cmd == "bot:repeat" or text.lower() == 'บอท off:
+                        elif cmd == "bot:repeat" or text.lower() == 'บอท off':
                             if msg._from in admin:
                                 wait["dellbots"] = True
                                 cl.sendText(msg.to,"Send a contact...")
