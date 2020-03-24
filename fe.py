@@ -765,8 +765,6 @@ def bot(op):
                             cl.sendMessage(op.param1,"=Admin Invited=")
                 else:
                     pass
-            except:
-                pass
 
         if op.type == 32:
             if op.param1 in protectcancel:
