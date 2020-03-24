@@ -2099,12 +2099,12 @@ def bot(op):
                         if cmd == "เปิดบอทf":
                             if msg._from in admin:
                                 wait["selfbot"] = True
-                                cl.sendText(msg.to, "เปิดระบบทำงานคิก10ตัวแล้ว..")
+                                cl.sendText(msg.to, "เปิดระบบทำงานคิก5ตัวแล้ว..")
                                 
                         elif cmd == "ปิดบอทf":
                             if msg._from in admin:
                                 wait["selfbot"] = False
-                                cl.sendText(msg.to, "ปิดระบบทำงานคิก10ตัวแล้ว")
+                                cl.sendText(msg.to, "ปิดระบบทำงานคิก5ตัวแล้ว")
                                             
                         elif cmd == "hb":
                           if wait["selfbot"] == True:
