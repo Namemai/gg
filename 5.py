@@ -4199,12 +4199,12 @@ def bot(op):
                                 wait["dellstaff"] = True
                                 cl.sendText(msg.to,"Send a contact...")
 
-                        elif cmd == "bot:on" or text.lower() == 'เปิดบอท':
+                        elif cmd == "bot:on" or text.lower() == 'เปิด':
                             if msg._from in admin:
                                 wait["addbots"] = True
                                 cl.sendText(msg.to,"Send a contact...")
 
-                        elif cmd == "bot:repeat" or text.lower() == 'ปิดบอท':
+                        elif cmd == "bot:repeat" or text.lower() == 'ปิด':
                             if msg._from in admin:
                                 wait["dellbots"] = True
                                 cl.sendText(msg.to,"Send a contact...")
