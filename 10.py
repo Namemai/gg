@@ -873,7 +873,6 @@ def bot(op):
                     except:
                         pass
 #======================================================================================================#
-=================================#
         if op.type == 17:
             if op.param2 in wait["blacklist"]:
                 random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
