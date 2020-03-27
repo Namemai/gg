@@ -22,34 +22,34 @@ from googletrans import Translator
 import youtube_dl
 #SEMOGA BERMANFAAT,,,TEGUH S..
 #=============
-cl = LineClient("mde43098@zzrgg.com","mai06555mai")
+cl = LineClient()
 cl.log("Auth Token : " + str(cl.authToken))
 channel = LineChannel(cl)
 cl.log("Channel Access Token : " + str(channel.channelAccessToken))
 
-ki = LineClient("pyn90402@eoopy.com","mai06555mai")
+ki = LineClient()
 ki.log("Auth Token : " + str(ki.authToken))
 channel1 = LineChannel(ki)
 ki.log("Channel Access Token : " + str(channel1.channelAccessToken))
 
-kk = LineClient("ufl85452@zzrgg.com","mai06555mai")
+kk = LineClient()
 kk.log("Auth Token : " + str(kk.authToken))
 channel2 = LineChannel(kk)
 kk.log("Channel Access Token : " + str(channel2.channelAccessToken))
 
-kc = LineClient("pqp05342@eoopy.com","mai06555mai")
+kc = LineClient()
 kc.log("Auth Token : " + str(kc.authToken))
 channel3 = LineChannel(kc)
 kc.log("Channel Access Token : " + str(channel3.channelAccessToken))
 
 
-km = LineClient("dag36597@bcaoo.com","mai06555mai")
+km = LineClient()
 km.log("Auth Token : " + str(km.authToken))
 channel4 = LineChannel(km)
 km.log("Channel Access Token : " + str(channel4.channelAccessToken))
 
 
-kb = LineClient("cew74790@bcaoo.com","mai06555mai")
+kb = LineClient()
 kb.log("Auth Token : " + str(kb.authToken))
 channel5 = LineChannel(kb)
 kb.log("Channel Access Token : " + str(channel5.channelAccessToken))
