@@ -3685,9 +3685,9 @@ def bot(op):
                                 if has1 == "OK":sil1 = "ok ยังไม่บัค"
                                 else:sil1 = "บัคแล้ว"
                                 ko.sendMessage(to, "ค่าสถานะ\nเตะ : {} \nเชิญ : {}".format(sil1,sil))
-                                try:kw.inviteIntoGroup(to, [Gmid]);has = "OK"
+                                try:kw.inviteIntoGroup(to, [Hmid]);has = "OK"
                                 except:has = "NOT"
-                                try:kw.kickoutFromGroup(to, [Gmid]);has1 = "OK"
+                                try:kw.kickoutFromGroup(to, [Hmid]);has1 = "OK"
                                 except:has1 = "NOT"
                                 if has == "OK":sil = "ok ยังไม่บัค"
                                 else:sil = "บัคแล้ว"
