@@ -61,16 +61,11 @@ channel6 = LineChannel(kn)
 kn.log("Channel Access Token : " + str(channel6.channelAccessToken))
 
 
-ko = LineClient("fvy82102@zzrgg.com","mai06555mai")
+ko = LineClient("yip80399@eoopy.com","mai06555mai")
 ko.log("Auth Token : " + str(ko.authToken))
 channel7 = LineChannel(ko)
 ko.log("Channel Access Token : " + str(channel7.channelAccessToken))
 
-
-kw = LineClient("yip80399@eoopy.com","mai06555mai")
-kw.log("Auth Token : " + str(kw.authToken))
-channel8 = LineChannel(kw)
-kw.log("Channel Access Token : " + str(channel8.channelAccessToken))
 
 
 sw = LineClient("rdd49652@zzrgg.com","mai06555mai")
@@ -95,11 +90,10 @@ Dmid = km.getProfile().mid
 Emid = kb.getProfile().mid
 Fmid = kn.getProfile().mid
 Gmid = ko.getProfile().mid
-Hmid = kw.getProfile().mid
 Zmid = sw.getProfile().mid
-KAC = [ki,kk,kc,km,kb,kn,ko,kw]
-ABC = [ki,kk,kc,km,kb,kn,ko,kw]
-Bots = [mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Zmid]
+KAC = [ki,kk,kc,km,kb,kn,ko]
+ABC = [ki,kk,kc,km,kb,kn,ko]
+Bots = [mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Zmid]
 Ghost = [sw]
 Dpk = admin + staff
 
@@ -119,7 +113,6 @@ responsename4 = km.getProfile().displayName
 responsename5 = kb.getProfile().displayName
 responsename6 = kn.getProfile().displayName
 responsename7 = ko.getProfile().displayName
-responsename8 = kw.getProfile().displayName
 
 settings = {
     "Picture":False,
@@ -686,15 +679,7 @@ def bot(op):
                     else:
                         ko.acceptGroupInvitation(op.param1)
                         ginfo = ko.getGroup(op.param1)
-            if Hmid in op.param3:
-                if wait["autoJoin"] == True:
-                    if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
-                        kw.acceptGroupInvitation(op.param1)
-                        ginfo = kw.getGroup(op.param1)
-                        kw.leaveGroup(op.param1)
-                    else:
-                        kw.acceptGroupInvitation(op.param1)
-                        ginfo = kw.getGroup(op.param1)
+
 #____________________________________________________________________
         if op.type == 13:
             if op.param1 in protectinvite:
@@ -756,14 +741,7 @@ def bot(op):
                                                         random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
                                                         random.choice(ABC).cancelGroupInvitation(op.param1,[_mid])
                                                 except:
-                                                    try:
-                                                        group = kw.getGroup(op.param1)
-                                                        gMembMids = [contact.mid for contact in group.invitee]
-                                                        for _mid in gMembMids:
-                                                            random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
-                                                            random.choice(ABC).cancelGroupInvitation(op.param1,[_mid])
-                                                    except:
-                                                        pass
+                                                    pass
                 return
 
         if op.type == 13:
@@ -799,10 +777,7 @@ def bot(op):
                                             try:
                                                 ko.cancleGroupInvitation(op.param1,[op.param2])
                                             except:
-                                                try:
-                                                    kw.cancleGroupInvitation(op.param1,[op.param2])
-                                                except:
-                                                    pass
+                                                pass
                                                             
         if op.type == 13:
             if op.param3 in wait["blacklist"]:
@@ -849,12 +824,7 @@ def bot(op):
                                                     kn.cancelGroupInvitation(op.param1,[op.param3])
                                                     kn.kickoutFromGroup(op.param1,[op.param2])
                                             except:
-                                                try:
-                                                    if op.param3 not in wait["blacklist"]:
-                                                        kw.cancelGroupInvitation(op.param1,[op.param3])
-                                                        kw.kickoutFromGroup(op.param1,[op.param2])
-                                                except:
-                                                    pass
+                                                pass
 #======================================================================================================#
         if op.type == 17:
             if op.param2 in wait["blacklist"]:
