@@ -26,68 +26,116 @@ cl = LineClient("06555mai@gmail.com","mai06555mai")
 cl.log("Auth Token : " + str(cl.authToken))
 channel = LineChannel(cl)
 cl.log("Channel Access Token : " + str(channel.channelAccessToken))
+lineProfile = cl.getProfile()
+lineSettings = cl.getSettings()
+mid = cl.getProfile().mid
+responsename = cl.getProfile().displayName
 
 ki = LineClient("vlq81196@zzrgg.com","mai06555mai")
 ki.log("Auth Token : " + str(ki.authToken))
 channel1 = LineChannel(ki)
 ki.log("Channel Access Token : " + str(channel1.channelAccessToken))
+lineProfile = ki.getProfile()
+lineSettings = ki.getSettings()
+Amid = ki.getProfile().mid
+responsename1 = ki.getProfile().displayName
 
 kk = LineClient("cpy76884@zzrgg.com","mai06555mai")
 kk.log("Auth Token : " + str(kk.authToken))
 channel2 = LineChannel(kk)
 kk.log("Channel Access Token : " + str(channel2.channelAccessToken))
+lineProfile = kk.getProfile()
+lineSettings = kk.getSettings()
+Bmid = kk.getProfile().mid
+responsename2 = kk.getProfile().displayName
 
 kc = LineClient("tvm12228@zzrgg.com","mai06555mai")
 kc.log("Auth Token : " + str(kc.authToken))
 channel3 = LineChannel(kc)
 kc.log("Channel Access Token : " + str(channel3.channelAccessToken))
+lineProfile = kc.getProfile()
+lineSettings = kc.getSettings()
+Cmid = kc.getProfile().mid
+responsename3 = kc.getProfile().displayName
 
 
 km = LineClient("edo38479@zzrgg.com","mai06555mai")
 km.log("Auth Token : " + str(km.authToken))
 channel4 = LineChannel(km)
 km.log("Channel Access Token : " + str(channel4.channelAccessToken))
+lineProfile = km.getProfile()
+lineSettings = km.getSettings()
+Dmid = km.getProfile().mid
+responsename4 = km.getProfile().displayName
 
 
 kb = LineClient("zci09379@zzrgg.com","mai06555mai")
 kb.log("Auth Token : " + str(kb.authToken))
 channel5 = LineChannel(kb)
 kb.log("Channel Access Token : " + str(channel5.channelAccessToken))
+lineProfile = kb.getProfile()
+lineSettings = kb.getSettings()
+Emid = kb.getProfile().mid
+responsename5 = kb.getProfile().displayName
 
 
 kn = LineClient("yxr96997@zzrgg.com","mai06555mai")
 kn.log("Auth Token : " + str(kn.authToken))
 channel6 = LineChannel(kn)
 kn.log("Channel Access Token : " + str(channel6.channelAccessToken))
+lineProfile = kn.getProfile()
+lineSettings = kn.getSettings()
+Fmid = kn.getProfile().mid
+responsename6 = kn.getProfile().displayName
 
 
 ko = LineClient("mlk16036@zzrgg.com","mai06555mai")
 ko.log("Auth Token : " + str(ko.authToken))
 channel7 = LineChannel(ko)
 ko.log("Channel Access Token : " + str(channel7.channelAccessToken))
+lineProfile = ko.getProfile()
+lineSettings = ko.getSettings()
+Gmid = ko.getProfile().mid
+responsename7 = kb.getProfile().displayName
 
 
 kw = LineClient("zgr15384@zzrgg.com","mai06555mai")
 kw.log("Auth Token : " + str(kw.authToken))
 channel8 = LineChannel(kw)
 kw.log("Channel Access Token : " + str(channel8.channelAccessToken))
+lineProfile = kw.getProfile()
+lineSettings = kw.getSettings()
+Hmid = kw.getProfile().mid
+responsename8 = kw.getProfile().displayName
 
 
 ke = LineClient("rdd49652@zzrgg.com","mai06555mai")
 ke.log("Auth Token : " + str(ke.authToken))
 channel9 = LineChannel(ke)
 ke.log("Channel Access Token : " + str(channel9.channelAccessToken))
+lineProfile = ke.getProfile()
+lineSettings = ke.getSettings()
+Imid = ke.getProfile().mid
+responsename9 = ke.getProfile().displayName
 
 ky = LineClient("svt36144@zzrgg.com","mai06555mai")
 ky.log("Auth Token : " + str(ky.authToken))
 channel10 = LineChannel(ky)
 ky.log("Channel Access Token : " + str(channel10.channelAccessToken))
+lineProfile = ky.getProfile()
+lineSettings = ky.getSettings()
+Jmid = ky.getProfile().mid
+responsename10 = ky.getProfile().displayName
 
 
 sw = LineClient("diq03714@zzrgg.com","mai06555mai")
 sw.log("Auth Token : " + str(sw.authToken))
 channel11 = LineChannel(sw)
 sw.log("Channel Access Token : " + str(channel11.channelAccessToken))
+lineProfile = sw.getProfile()
+lineSettings = sw.getSettings()
+Zmid = sw.getProfile().mid
+responsename = sw.getProfile().displayName
 
 
 print("---LOGIN SUCCES---\n mai")
@@ -110,7 +158,7 @@ Hmid = kw.getProfile().mid
 Imid = ke.getProfile().mid
 Jmid = ky.getProfile().mid
 Zmid = sw.getProfile().mid
-KAC = [ki,kk,kc,km,kb,kn,ko,kw,ke,ky]
+KAC = [ki,kk,kc,km,kb,kn,ko,kw,ke,ky,sw]
 ABC = [ki,kk,kc,km,kb,kn,ko,kw,ke,ky,sw]
 Bots = [mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,Jmid,Zmid]
 Ghost = [sw]
@@ -740,7 +788,7 @@ def bot(op):
                 if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
                     wait["blacklist"][op.param2] = True
                     try:
-                        group = cl.getGroup(op.param1)
+                        group = sw.getGroup(op.param1)
                         gMembMids = [contact.mid for contact in group.invitee]
                         for _mid in gMembMids:
                             random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
@@ -5710,12 +5758,12 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                               if wait["blacklist"] == {}:
-                                    cl.sendMessage(msg.to,"Tidak ada blacklist")
+                                    ki.sendMessage(msg.to,"Tidak ada blacklist")
                               else:
                                     ma = ""
                                     for i in wait["blacklist"]:
-                                        ma = cl.getContact(i)
-                                        cl.sendMessage(msg.to, None, contentMetadata={'mid': i}, contentType=13)
+                                        ma = ki.getContact(i)
+                                        ki.sendMessage(msg.to, None, contentMetadata={'mid': i}, contentType=13)
 
                         elif cmd == "clearban" or text.lower() == 'cb':
                           if wait["selfbot"] == True:
@@ -5723,7 +5771,16 @@ def bot(op):
                               wait["blacklist"] = {}
                               ragets = cl.getContacts(wait["blacklist"])
                               mc = "「%i」User Blacklist" % len(ragets)
-                              cl.sendMessage(msg.to,"Sukses membersihkan " +mc)
+                              ki.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              kk.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              kc.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              km.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              kb.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              kn.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              ko.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              kw.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              ke.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
+                              ky.sendMessage(msg.to,"ล้างดำหมดแล้วค่ะ....ok " +mc)
 
                         elif cmd.startswith("ผีดึง "):
                           if msg._from in admin:
