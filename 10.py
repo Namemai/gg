@@ -3268,7 +3268,7 @@ def bot(op):
                                Setmain["keyCommand"] = ""
                                cl.sendMessage(msg.to, "「Setkey」\nSetkey mu kembali ke awal")
 
-                        elif cmd == "รี10":
+                        elif cmd == "รี":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                cl.sendMessage(msg.to, "ใช้เวลารีระบบ 3วิ กรุนารอซักครู่...")
@@ -4165,10 +4165,10 @@ def bot(op):
                                 kw.acceptGroupInvitationByTicket(msg.to,Ticket)
                                 ke.acceptGroupInvitationByTicket(msg.to,Ticket)
                                 ky.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                sw.acceptGroupInvitationByTicket(msg.to,Ticket)
                                 G = ky.getGroup(msg.to)
                                 G.preventedJoinByTicket = True
                                 ky.updateGroup(G)
-                                ky.sendMessage(msg.to, "พร้อมคุ้มกันเจ้านายค่ะ ")
 
                         elif cmd == "out":
                           if wait["selfbot"] == True:
@@ -4195,105 +4195,96 @@ def bot(op):
                                 
                         elif cmd == "ck":
                             if msg._from in admin or msg._from in owner:
-                               try:cl.inviteIntoGroup(to, [mid]);has = "OK"
-                               except:has = "NOT"
-                               try:cl.kickoutFromGroup(to, [mid]);has1 = "OK"
-                               except:has1 = "NOT"
-                               if has == "OK":sil = "🔋██ full 100%"
-                               else:sil = "🔌█▒ Low 0%"
-                               if has1 == "OK":sil1 = "🔋██ full 100%"
-                               else:sil1 = "🔌█▒ Low 0%"
-                               cl.sendMessage(to, "Status:\n\n🔴Kick : {} \n🔴Invite : {}".format(sil1,sil))
-                               try:ki.inviteIntoGroup(to, [Amid]);has = "OK"
-                               except:has = "NOT"
-                               try:ki.kickoutFromGroup(to, [Amid]);has1 = "OK"
-                               except:has1 = "NOT"
-                               if has == "OK":sil = "🔋██ full 100%"
-                               else:sil = "🔌█▒ Low 0%"
-                               if has1 == "OK":sil1 = "🔋██ full 100%"
-                               else:sil1 = "🔌█▒ Low 0%"
-                               ki.sendMessage(to, "Status:\n\n🔴Kick : {} \n🔴Invite : {}".format(sil1,sil))                               
-                               try:kk.inviteIntoGroup(to, [Bmid]);has = "OK"
-                               except:has = "NOT"
-                               try:kk.kickoutFromGroup(to, [Bmid]);has1 = "OK"
-                               except:has1 = "NOT"
-                               if has == "OK":sil = "🔋██ full 100%"
-                               else:sil = "🔌█▒. Low 0%"
-                               if has1 == "OK":sil1 = "🔋██ full 100%"
-                               else:sil1 = "🔌█▒ Low 0%"
-                               kk.sendMessage(to, "Status:\n\n🔴Kick : {} \n🔴Invite : {}".format(sil1,sil))
-                               try:kc.inviteIntoGroup(to, [Cmid]);has = "OK"
-                               except:has = "NOT"
-                               try:kc.kickoutFromGroup(to, [Cmid]);has1 = "OK"
-                               except:has1 = "NOT"
-                               if has == "OK":sil = "🔋██ full 100%"
-                               else:sil = "🔌█▒. Low 0%"
-                               if has1 == "OK":sil1 = "🔋██ full 100%"
-                               else:sil1 = "🔌█▒ Low  0%"
-                               kc.sendMessage(to, "Status:\n\n🔴Kick : {} \n🔴Invite : {}".format(sil1,sil))                               
-                               try:km.inviteIntoGroup(to, [Dmid]);has = "OK"
-                               except:has = "NOT"
-                               try:km.kickoutFromGroup(to, [Dmid]);has1 = "OK"
-                               except:has1 = "NOT"
-                               if has == "OK":sil = "🔋██ full 100%"
-                               else:sil = "🔌█▒ Low 0%"
-                               if has1 == "OK":sil1 = "🔋██ full 100%"
-                               else:sil1 = "🔌█▒ Low 0%"
-                               km.sendMessage(to, "Status:\n\n🔴Kick : {} \n🔴Invite : {}".format(sil1,sil))                              
-                               try:kb.inviteIntoGroup(to, [Emid]);has = "OK"
-                               except:has = "NOT"
-                               try:kb.kickoutFromGroup(to, [Emid]);has1 = "OK"
-                               except:has1 = "NOT"
-                               if has == "OK":sil = "🔋██ full 100%"
-                               else:sil = "🔌█▒ Low 0%"
-                               if has1 == "OK":sil1 = "🔋██ full 100%"
-                               else:sil1 = "🔌█▒ Low 0%"
-                               kb.sendMessage(to, "Status:\n\n🔴Kick : {} \n🔴Invite : {}".format(sil1,sil))
-                               try:kn.inviteIntoGroup(to, [Fmid]);has = "OK"
-                               except:has = "NOT"
-                               try:kn.kickoutFromGroup(to, [Fmid]);has1 = "OK"
-                               except:has1 = "NOT"
-                               if has == "OK":sil = "🔋██ full 100%"
-                               else:sil = "🔌█▒. Low 0%"
-                               if has1 == "OK":sil1 = "🔋██ full 100%"
-                               else:sil1 = "🔌█▒ Low 0%"
-                               kn.sendMessage(to, "Status:\n\n🔴Kick : {} \n🔴Invite : {}".format(sil1,sil))
-                               try:ko.inviteIntoGroup(to, [Gmid]);has = "OK"
-                               except:has = "NOT"
-                               try:ko.kickoutFromGroup(to, [Gmid]);has1 = "OK"
-                               except:has1 = "NOT"
-                               if has == "OK":sil = "🔋██ full 100%"
-                               else:sil = "🔌█▒ Low 0%"
-                               if has1 == "OK":sil1 = "🔋██ full 100%"
-                               else:sil1 = "🔌█▒ Low 0%"
-                               ko.sendMessage(to, "Status:\n\n🔴Kick : {} \n🔴Invite : {}".format(sil1,sil))                               
-                               try:kw.inviteIntoGroup(to, [Hmid]);has = "OK"
-                               except:has = "NOT"
-                               try:kw.kickoutFromGroup(to, [Hmid]);has1 = "OK"
-                               except:has1 = "NOT"
-                               if has == "OK":sil = "🔋██ full 100%"
-                               else:sil = "🔌█▒. Low 0%"
-                               if has1 == "OK":sil1 = "🔋██ full 100%"
-                               else:sil1 = "🔌█▒ Low 0%"
-                               kw.sendMessage(to, "Status:\n\n🔴Kick : {} \n🔴Invite : {}".format(sil1,sil))
-                               try:ke.inviteIntoGroup(to, [Imid]);has = "OK"
-                               except:has = "NOT"
-                               try:ke.kickoutFromGroup(to, [Imid]);has1 = "OK"
-                               except:has1 = "NOT"
-                               if has == "OK":sil = "🔋██ full 100%"
-                               else:sil = "🔌█▒. Low 0%"
-                               if has1 == "OK":sil1 = "🔋██ full 100%"
-                               else:sil1 = "🔌█▒ Low  0%"
-                               ke.sendMessage(to, "Status:\n\n🔴Kick : {} \n🔴Invite : {}".format(sil1,sil))                               
-                               try:ky.inviteIntoGroup(to, [Jmid]);has = "OK"
-                               except:has = "NOT"
-                               try:ky.kickoutFromGroup(to, [Jmid]);has1 = "OK"
-                               except:has1 = "NOT"
-                               if has == "OK":sil = "🔋██ full 100%"
-                               else:sil = "🔌█▒ Low 0%"
-                               if has1 == "OK":sil1 = "🔋██ full 100%"
-                               else:sil1 = "🔌█▒ Low 0%"
-                               ky.sendMessage(to, "Status:\n\n🔴Kick : {} \n🔴Invite : {}".format(sil1,sil))
+                                try:ki.inviteIntoGroup(to, [Amid]);has = "OK"
+                                except:has = "NOT"
+                                try:ki.kickoutFromGroup(to, [Amid]);has1 = "OK"
+                                except:has1 = "NOT"
+                                if has == "OK":sil = "ok ยังไม่บัค"
+                                else:sil = "บัคแล้ว"
+                                if has1 == "OK":sil1 = "ok ยังไม่บัค"
+                                else:sil1 = "บัคแล้ว"
+                                ki.sendMessage(to, "ค่าสถานะ\nเตะ : {} \nเชิญ : {}".format(sil1,sil))
+                                try:kk.inviteIntoGroup(to, [Bmid]);has = "OK"
+                                except:has = "NOT"
+                                try:kk.kickoutFromGroup(to, [Bmid]);has1 = "OK"
+                                except:has1 = "NOT"
+                                if has == "OK":sil = "ok ยังไม่บัค"
+                                else:sil = "บัคแล้ว"
+                                if has1 == "OK":sil1 = "ok ยังไม่บัค"
+                                else:sil1 = "บัคแล้ว"
+                                kk.sendMessage(to, "ค่าสถาะ\nเตะ : {} \nเชิญ : {}".format(sil1,sil))
+                                try:kc.inviteIntoGroup(to, [Cmid]);has = "OK"
+                                except:has = "NOT"
+                                try:kc.kickoutFromGroup(to, [Cmid]);has1 = "OK"
+                                except:has1 = "NOT"
+                                if has == "OK":sil = "ok ยังไม่บัค"
+                                else:sil = "บัคแล้ว"
+                                if has1 == "OK":sil1 = "ok ยังไม่บัค"
+                                else:sil1 = "บัคแล้ว"
+                                kc.sendMessage(to, "ค่าสถานะ\nเตะ : {} \nเชิญ : {}".format(sil1,sil))
+                                try:km.inviteIntoGroup(to, [Dmid]);has = "OK"
+                                except:has = "NOT"
+                                try:km.kickoutFromGroup(to, [Dmid]);has1 = "OK"
+                                except:has1 = "NOT"
+                                if has == "OK":sil = "ok ยังไม่บัค"
+                                else:sil = "บัคแล้ว"
+                                if has1 == "OK":sil1 = "ok ยังไม่บัค"
+                                else:sil1 = "บัคแล้ว"
+                                km.sendMessage(to, "ค่าสถานะ\nเตะ : {} \nเชิญ : {}".format(sil1,sil))
+                                try:kb.inviteIntoGroup(to, [Emid]);has = "OK"
+                                except:has = "NOT"
+                                try:kb.kickoutFromGroup(to, [Emid]);has1 = "OK"
+                                except:has1 = "NOT"
+                                if has == "OK":sil = "ok ยังไม่บัค"
+                                else:sil = "บัคแล้ว"
+                                if has1 == "OK":sil1 = "ok ยังไม่บัค"
+                                else:sil1 = "บัคแล้ว"
+                                kb.sendMessage(to, "ค่าสถานะ\nเตะ : {} \nเชิญ : {}".format(sil1,sil))
+                                try:kn.inviteIntoGroup(to, [Fmid]);has = "OK"
+                                except:has = "NOT"
+                                try:kn.kickoutFromGroup(to, [Fmid]);has1 = "OK"
+                                except:has1 = "NOT"
+                                if has == "OK":sil = "ok ยังไม่บัค"
+                                else:sil = "บัคแล้ว"
+                                if has1 == "OK":sil1 = "ok ยังไม่บัค"
+                                else:sil1 = "บัคแล้ว"
+                                kn.sendMessage(to, "ค่าสถานะ\nเตะ : {} \nเชิญ : {}".format(sil1,sil))
+                                try:ko.inviteIntoGroup(to, [Gmid]);has = "OK"
+                                except:has = "NOT"
+                                try:ko.kickoutFromGroup(to, [Gmid]);has1 = "OK"
+                                except:has1 = "NOT"
+                                if has == "OK":sil = "ok ยังไม่บัค"
+                                else:sil = "บัคแล้ว"
+                                if has1 == "OK":sil1 = "ok ยังไม่บัค"
+                                else:sil1 = "บัคแล้ว"
+                                ko.sendMessage(to, "ค่าสถานะ\nเตะ : {} \nเชิญ : {}".format(sil1,sil))
+                                try:kw.inviteIntoGroup(to, [Hmid]);has = "OK"
+                                except:has = "NOT"
+                                try:kw.kickoutFromGroup(to, [Hmid]);has1 = "OK"
+                                except:has1 = "NOT"
+                                if has == "OK":sil = "ok ยังไม่บัค"
+                                else:sil = "บัคแล้ว"
+                                if has1 == "OK":sil1 = "ok ยังไม่บัค"
+                                else:sil1 = "บัคแล้ว"
+                                kw.sendMessage(to, "ค่าสถานะ\nเตะ : {} \nเชิญ : {}".format(sil1,sil))
+                                try:ke.inviteIntoGroup(to, [Imid]);has = "OK"
+                                except:has = "NOT"
+                                try:ke.kickoutFromGroup(to, [Imid]);has1 = "OK"
+                                except:has1 = "NOT"
+                                if has == "OK":sil = "ok ยังไม่บัค"
+                                else:sil = "บัคแล้ว"
+                                if has1 == "OK":sil1 = "ok ยังไม่บัค"
+                                else:sil1 = "บัคแล้ว"
+                                ke.sendMessage(to, "ค่าสถานะ\nเตะ : {} \nเชิญ : {}".format(sil1,sil))
+                                try:ky.inviteIntoGroup(to, [Jmid]);has = "OK"
+                                except:has = "NOT"
+                                try:ky.kickoutFromGroup(to, [Jmid]);has1 = "OK"
+                                except:has1 = "NOT"
+                                if has == "OK":sil = "ok ยังไม่บัค"
+                                else:sil = "บัคแล้ว"
+                                if has1 == "OK":sil1 = "ok ยังไม่บัค"
+                                else:sil1 = "บัคแล้ว"
+                                ky.sendMessage(to, "ค่าสถานะ\nเตะ : {} \nเชิญ : {}".format(sil1,sil))
 
                         elif cmd == "a1":
                             if msg._from in admin:
@@ -5849,39 +5840,6 @@ def bot(op):
                                      group = cl.findGroupByTicket(ticket_id)
                                      cl.acceptGroupInvitationByTicket(group.id,ticket_id)
                                      cl.sendMessage(msg.to, "สวัสดีครับ : %s" % str(group.name))
-                                     group1 = ki.findGroupByTicket(ticket_id)
-                                     ki.acceptGroupInvitationByTicket(group1.id,ticket_id)
-                                     ki.sendMessage(msg.to, "สวัสดีค่ะเรามาใหม่นะ : %s" % str(group.name))
-                                     group2 = kk.findGroupByTicket(ticket_id)
-                                     kk.acceptGroupInvitationByTicket(group2.id,ticket_id)
-                                     kk.sendMessage(msg.to, "สวัสดีค่ะเรามาใหม่นะ : %s" % str(group.name))
-                                     group3 = kc.findGroupByTicket(ticket_id)
-                                     kc.acceptGroupInvitationByTicket(group3.id,ticket_id)
-                                     kc.sendMessage(msg.to, "สวัสดีค่ะเรามาใหม่นะ : %s" % str(group.name))
-                                     group4 = km.findGroupByTicket(ticket_id)
-                                     km.acceptGroupInvitationByTicket(group4.id,ticket_id)
-                                     km.sendMessage(msg.to, "สวัสดีค่ะเรามาใหม่นะ : %s" % str(group.name))
-                                     group5 = kb.findGroupByTicket(ticket_id)
-                                     kb.acceptGroupInvitationByTicket(group5.id,ticket_id)
-                                     kb.sendMessage(msg.to, "สวัสดีค่ะเรามาใหม่นะ : %s" % str(group.name))
-                                     group6 = kn.findGroupByTicket(ticket_id)
-                                     kn.acceptGroupInvitationByTicket(group6.id,ticket_id)
-                                     kn.sendMessage(msg.to, "สวัสดีค่ะเรามาใหม่นะ : %s" % str(group.name))
-                                     group7 = ko.findGroupByTicket(ticket_id)
-                                     ko.acceptGroupInvitationByTicket(group7.id,ticket_id)
-                                     ko.sendMessage(msg.to, "สวัสดีค่ะเรามาใหม่นะ : %s" % str(group.name))
-                                     group8 = kw.findGroupByTicket(ticket_id)
-                                     kw.acceptGroupInvitationByTicket(group8.id,ticket_id)
-                                     kw.sendMessage(msg.to, "สวัสดีค่ะเรามาใหม่นะ : %s" % str(group.name))
-                                     group9 = ke.findGroupByTicket(ticket_id)
-                                     ke.acceptGroupInvitationByTicket(group9.id,ticket_id)
-                                     ke.sendMessage(msg.to, "สวัสดีค่ะเรามาใหม่นะ : %s" % str(group.name))
-                                     group10 = ky.findGroupByTicket(ticket_id)
-                                     ky.acceptGroupInvitationByTicket(group10.id,ticket_id)
-                                     ky.sendMessage(msg.to, "สวัสดีค่ะเรามาใหม่นะ : %s" % str(group.name))
-                                     group11 = sw.findGroupByTicket(ticket_id)
-                                     sw.acceptGroupInvitationByTicket(group11.id,ticket_id)
-                                     sw.sendMessage(msg.to, "สวัสดีค่ะเรามาใหม่นะ : %s" % str(group.name))
 
     except Exception as error:
         print (error)
