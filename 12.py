@@ -3669,7 +3669,7 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                start = time.time()
-                               ki.sendMessage(msg.to, "Pusiiing...")
+                               cl.sendMessage(msg.to, "Pusiiing...")
                                elapsed_time = time.time() - start
                                ki.sendMessage(msg.to, "{} ms".format(str(elapsed_time)))
                                elapsed_time = time.time() - start
