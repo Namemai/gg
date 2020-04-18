@@ -3504,6 +3504,12 @@ def bot(op):
                                 try:kw.inviteIntoGroup(to, [Hmid]);has = "OK"
                                 except:has = "NOT"
                                 try:kw.kickoutFromGroup(to, [Hmid]);has1 = "OK"
+                                except:has1 = "NOT"
+                                if has == "OK":sil = "ok ยังไม่บัค"
+                                else:sil = "บัคแล้ว"
+                                if has1 == "OK":sil1 = "ok ยังไม่บัค"
+                                else:sil1 = "บัคแล้ว"
+                                kw.sendMessage(to, "สถานะ\nเตะ : {} \nเชิญ : {}".format(sil1,sil))
 
                                 
                         elif cmd == "bb" or cmd == "8":
