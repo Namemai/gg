@@ -3524,7 +3524,7 @@ def bot(op):
                                 ko.sendMessage(msg.to, "อยู่ค่ะเจ้านาย ")
                                 kw.sendMessage(msg.to, "อยู่ค่ะเจ้านาย ")
 
-                        elif cmd == "spb":
+                        elif cmd == "sb":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 get_profile_time_start = time.time()
@@ -3568,11 +3568,11 @@ def bot(op):
                                elapsed_time = time.time() - start
                                cl.sendMessage(msg.to, "{} ms".format(str(elapsed_time)))
 
-                        elif cmd == "speedbot" or cmd == "sb":
+                        elif cmd == "speedbot" or cmd == "spb":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                start = time.time()
-                               cl.sendMessage(msg.to, "Pusiiing...")
+                               cl.sendMessage(msg.to, "speedbot...")
                                elapsed_time = time.time() - start
                                ki.sendMessage(msg.to, "{} ms".format(str(elapsed_time)))
                                elapsed_time = time.time() - start
